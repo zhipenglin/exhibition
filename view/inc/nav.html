@@ -1,0 +1,17 @@
+<div class="nav">
+    <div class="nav__layout clearfix">
+        <div class="nav__logo"></div>
+        <div class="nav__main clearfix">
+            <div class="nav__share">
+                <button class="btn lang" data-type="zh-cn">中文</button><button class="btn lang" data-type="en">English</button>
+            </div>
+            <ul class="nav__inner clearfix">
+                <li class="nav__item<%=title=='title-home'?' on':''%>"><a href="/"><%- _('nav-home')%></a></li>
+                <li class="nav__item<%=title=='title-about'?' on':''%>"><a href="/about"><%- _('nav-about')%></a></li>
+                <li class="nav__item<%=title=='title-guide'?' on':''%>"><a href="#"><%- _('nav-guide')%></a></li>
+                <li class="nav__item<%=title=='title-media'?' on':''%>"><a href="#"><%- _('nav-media')%></a></li>
+                <li class="nav__item<%=title=='title-sponsor'?' on':''%>"><a href="#"><%- _('nav-sponsor')%></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
