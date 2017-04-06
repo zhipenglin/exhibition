@@ -47,6 +47,12 @@ body{
 a{
     text-decoration:none;
 }
+a.btn{
+    color:#fff;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
 /** reset end **/
 
 .clearfix:after{
@@ -66,6 +72,7 @@ a{
 }
 .nav__logo{
     float: left;
+    margin-right: 100px;
 }
 .nav__logo:before{
     content:'';
@@ -76,22 +83,21 @@ a{
     margin: 0 auto;
 }
 .nav__logo:after{
-    text-align: center;
+    display: block;
     color:#fff;
     font-size: 20px;
     content:'国际艺术&古董展';
+    margin: 10px 0;
 }
 .nav__main{
 
 }
 .nav__share{
     text-align: right;
-    height: 50px;
+    height: 70px;
 }
 .nav__inner{
     position: relative;
-    left: 50%;
-    float: left;
 }
 .nav__item{
     float: left;
@@ -99,8 +105,6 @@ a{
     height: 50px;
     line-height: 50px;
     padding: 0 20px;
-    position: relative;
-    right: 50%;
 }
 .nav__item a{
     color:#fff;
