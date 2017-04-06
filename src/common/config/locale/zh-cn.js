@@ -8,4 +8,8 @@ export default {
     'nav-sponsor':'赞助合作',
     'title-home':'主页',
     'title-about':'关于我们',
+
+    'index-banner-h1':'国际古董艺术展',
+    'index-banner-h2':'成都·2017·X·XXX',
+    'index-banner-h3':'世纪新城国际展览中心'
 };

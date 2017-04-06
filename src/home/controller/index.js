@@ -8,7 +8,6 @@ export default class extends Base {
    * @return {Promise} []
    */
   indexAction(){
-    console.log(this.title);
     //auto render template file index_index.html
     //this.cookie('think_locale', 'zh-cn');
     this.assign('title', 'title-home');

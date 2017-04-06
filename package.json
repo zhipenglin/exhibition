@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node www/development.js",
-    "compile": "babel src/ --out-dir app/",
+    "prostart":"node www/production.js",
+    "build": "babel src/ --out-dir app/",
     "watch-compile": "node -e \"console.log('<npm run watch-compile> no longer need, use <npm start> command direct.');console.log();\"",
     "watch": "npm run watch-compile"
   },
