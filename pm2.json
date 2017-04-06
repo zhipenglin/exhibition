@@ -4,7 +4,7 @@
     "script": "www/production.js",
     //"cwd": "/Users/mac/Documents/project/exhibition",
     "exec_mode": "cluster",
-    "instances": 0,
+    "instances": 4,
     "max_memory_restart": "1G",
     "autorestart": true,
     "node_args": [],
