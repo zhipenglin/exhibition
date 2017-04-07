@@ -27,7 +27,7 @@
         },
         timer:function(){
             var self=this;
-            this.timerId=setInterval(function(){
+            this.timerId=$.setInterval(function(){
                 self.bannerItemList[Math.floor(Math.random()*self.bannerItemList.length)].next();
             },2000);
         },
@@ -35,20 +35,20 @@
             var self=this;
             var size=Math.round($(window).width()/6);
             this.$el.html(_.template(
-                '<%_.each(position,function(n,i){%><div class="banner__item" style="top:<%=n.y%>px;left:<%=n.x%>px;width:<%=n.width%>px;height:<%=n.height%>px;"><%_.each(list[i],function(img){%><img src="<%=img%>"/><%})%><%if(n.content){%><div style="font-size:<%=n.width/10%>px;"><%=n.content%></div><%}%></div><%})%>'
+                '<%_.each(position,function(n,i){%><div class="banner__item banner_item" style="top:<%=n.y%>px;left:<%=n.x%>px;width:<%=n.width%>px;height:<%=n.height%>px;"><%_.each(list[i],function(img){%><img src="<%=img%>"/><%})%></div><%})%><div class="banner__item" style="width:<%=2*size%>px;height:<%=2*size%>px;left:<%=3*size%>px;top:0;font-size:<%=size/5%>px;"><div class="banner__content"><%=content%></div></div>'
             )({position:[
                 {x:0,y:0,width:size,height:size},
                 {x:size,y:0,width:size,height:size},
                 {x:2*size,y:0,width:size,height:size},
-                {x:3*size,y:0,width:2*size,height:2*size,content:this.content},
+                //{x:3*size,y:0,width:2*size,height:2*size,content:this.content},
                 {x:5*size,y:0,width:size,height:size},
                 {x:0,y:size,width:size,height:size},
                 {x:size,y:size,width:size,height:size},
                 {x:2*size,y:size,width:size,height:size},
                 {x:5*size,y:size,width:size,height:size}
-            ],list:this.list}));
+            ],list:this.list,size:size,content:this.content}));
 
-            this.bannerItemList=_.map(this.$el.find('.banner__item'),function(item,i){
+            this.bannerItemList=_.map(this.$el.find('.banner_item'),function(item,i){
                 return new BannerItem(item,self.list[i]);
             });
         },

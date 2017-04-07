@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node www/development.js",
-    "prostart":"node www/production.js",
+    "pm2start":"babel src/ --out-dir app/&&pm2 startOrReload pm2.json",
     "build": "babel src/ --out-dir app/",
     "watch-compile": "node -e \"console.log('<npm run watch-compile> no longer need, use <npm start> command direct.');console.log();\"",
     "watch": "npm run watch-compile"

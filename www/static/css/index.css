@@ -34,6 +34,13 @@
     opacity: 0.8;
     z-index: 10;
 }
+.banner__bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+}
 .banner__content h1{
     font-size: 1em;
 }
